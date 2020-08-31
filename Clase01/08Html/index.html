@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Bienvenidos al curso de <b>jQuery</b></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var textoParrafo = $("p").text();
+        var ingreso = prompt("El valor actual es "+textoParrafo+ " Ingrese nuevo valor:");
+        $("p").html(ingreso); //equivalente a innerHTML
+        var leerHtml = $("p").html();
+    </script>
+</body>
+</html>

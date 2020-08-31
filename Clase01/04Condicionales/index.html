@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var casado = true;
+
+        casado = confirm("Es usted casado?");
+        var divorciado = confirm("Es usted divorciado?");
+
+        /*
+        == Igualdad de comparacion
+        != Distinto
+        > Mayor
+        < Menor
+        >= Mayor o igual
+        <= Menor o igual
+        */
+        if(casado == true){
+            alert("Usted es casado");
+        } else if(divorciado==true) {
+            alert("Usted esta divorciado");
+        } else {
+            alert("Usted es soltero");
+        }
+
+        /*
+        && "Y" logico
+        || "O" logico
+        !  "No" logico
+        */
+
+        var edad = 20;
+
+        if(casado == true && edad < 18){
+            alert("Para casarse tuvo que autorizar sus padres");
+        }
+
+    </script>
+</body>
+</html>

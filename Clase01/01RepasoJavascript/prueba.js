@@ -1,0 +1,1 @@
+alert("Ejecutado desde un archivo externo")
