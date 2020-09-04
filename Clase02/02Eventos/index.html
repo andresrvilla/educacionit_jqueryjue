@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function saludar(){
+            var nombre = $("#txtNombre").val();
+            alert("Hola "+ nombre);
+        }        
+
+        function alertarMouseOver(){
+            alert("Pasaste sobre el div")
+        }        
+
+        function inicio(){
+            alert("Se termino de cargar la pagina");
+            $("#contenedor").mouseover(alertarMouseOver);
+            $("#btnSaludar").click(saludar);
+            $("#btnSaludarDobleClick").dblclick(saludar);
+            // tambien puedo usar selector css separado por coma
+            //$("#btnSaludar,#btnSaludarDobleClick").click(saludar);
+        }
+
+        $(document).ready(inicio);
+
+        // Equivalente a
+        //$().ready(inicio);
+        //$("div").ready(inicio);
+        //$(inicio);
+        
+    </script>
+
+    Nombre: <input type="text" id="txtNombre"><br>
+    <button id="btnSaludar">Saludar</button><br>
+    <span id="btnSaludarDobleClick">Saludar con doble click</span>
+    <hr />
+    <div id="contenedor">Pasa el mouse sobre mi</div>
+
+    
+</body>
+</html>

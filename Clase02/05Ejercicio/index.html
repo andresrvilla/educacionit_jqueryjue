@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bienvenidos al Shop</h2>
+    <table>
+        <tr>
+            <td>
+                <img id="camara" src="img/camara.jpg" data-descripcion="Descripcion de la camara" />
+                <span id="camaraSpan" style="display: none">Comprar Camara Sony M9</span>
+            </td>
+            <td>
+                <img id="iphone" src="img/iphone.jpg" data-descripcion="Descripcion del iphone" />
+                <span id="iphoneSpan" style="display: none">Comprar Iphone 11</span>
+            </td>
+            <td>
+                <img id="auriculares" src="img/auriculares.jpg" data-descripcion="Descripcion de los auriculares" />
+                <span id="auricularesSpan" style="display: none">Comprar Auriculares Noga</span>
+            </td>
+        </tr>
+    </table>
+    <div id="panelDescripcion">
+
+    </div>
+    <a id="vinculoComprar" style="display:none;">Comprar</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#camara").mouseover(function(){
+                var texto = $("#camaraSpan").text();
+                $("h2").text(texto);
+                //$("h2").text($("#camara span").text());
+                var descripcion = $("#camara").attr("data-descripcion");
+                $("#panelDescripcion").text(descripcion);
+            })
+
+            $("#camara").click(function(){
+                $("#vinculoComprar").attr({
+                    href: "http://educacionit.com/comprar/camara",
+                    style: "display:block;"
+                });
+            });
+
+            $("#iphone").mouseover(function(){
+                var texto = $("#iphoneSpan").text();
+                $("h2").text(texto);
+                var descripcion = $("#iphone").attr("data-descripcion");
+                $("#panelDescripcion").text(descripcion);
+            });
+
+            $("#auriculares").mouseover(function(){
+                var texto = $("#auricularesSpan").text();
+                $("h2").text(texto)
+                var descripcion = $("#auriculares").attr("data-descripcion");
+                $("#panelDescripcion").text(descripcion);
+            })
+
+            $("#camara,#iphone,#auriculares").mouseout(function(){
+                $("h2").text("Bienvenidos al Shop");
+                $("#panelDescripcion").text("");
+            })
+        });
+        
+    </script>
+</body>
+</html>

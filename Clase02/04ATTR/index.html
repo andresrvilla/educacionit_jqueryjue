@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.google.com.ar" title="Ir a Google">Ir</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // $("SELECTORCSS").attr("nombreAtributo")
+        var atributo = $("a").attr("title");
+        alert(atributo);
+        //$("a").attr("title","Nuevo Valor");
+        //$("a").attr("href","http://www.educacionit.com");
+        /*
+            JSON
+            Javascript Object Notation
+        */
+        var persona = {
+            "Nombre": "Andres",
+            "Apellido": "Villa",
+            "Cursos": [
+                "Jquery para diseñadores",
+                "Javascript desde cero"
+            ],
+            "Documento": {
+                "Tipo": "DNI",
+                "Numero": 12312312
+            }
+        }
+        $("a").attr({
+            "title": "EducacionIT",
+            href: "http://educacionit.com"
+        });
+
+        $("a").text("Ir a Educacion IT");
+        $("a").removeAttr("title");
+    </script>
+</body>
+</html>
