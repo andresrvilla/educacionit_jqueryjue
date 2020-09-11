@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado {
+            width: 200px;
+            height: 200px;
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="cuadrado">
+        
+    </div>
+    <button id="btnRojo">Rojo</button><br>
+    <button id="btnAzul">Azul</button><br>
+    <button id="btnNormal">200px</button><br>
+    <button id="btnGrande">350px</button><br>
+    <button id="btnLimpiar">Limpiar</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Quiero que cuando el cursor del mouse esta dentro del div
+        // se vea el color #3e94c9
+        
+        $(".cuadrado").mouseover(function(){
+            //$(".cuadrado").attr("style","background-color: #3e94c9");
+            $(".cuadrado").css("background-color", "#3e94c9");
+        });
+        
+        $("#btnRojo").click(function(){
+            //$(".cuadrado").attr("style","background-color: red");
+            $(".cuadrado").css("background-color","red");
+        })
+        $("#btnAzul").click(function(){
+            //$(".cuadrado").attr("style","background-color: blue");
+            $(".cuadrado").css("background-color","blue");
+        })
+        $("#btnNormal").click(function(){
+            //$(".cuadrado").attr("style","width: 200px;height:200px");
+            /*
+            $(".cuadrado").css("width","200px");
+            $(".cuadrado").css("height","200px");
+            */
+            $(".cuadrado").css({
+                "width": "200px",
+                "height": "200px"
+            })
+        })
+        $("#btnGrande").click(function(){
+            //$(".cuadrado").attr("style","width: 350px;height:350px");
+            /*
+            $(".cuadrado").css("width","350px");
+            $(".cuadrado").css("height","350px");
+            */
+            $(".cuadrado").css({
+                "width": "350px",
+                "height": "350px"
+            })
+        })
+
+        $("#btnLimpiar").click(function(){
+            /*$(".cuadrado").css({
+                "width": "",
+                "height": "",
+                "background-color": ""
+            })*/
+            $(".cuadrado").attr("style","");
+        });
+
+    </script>
+</body>
+</html>

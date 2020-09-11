@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cuadrado{
+            width:200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadrado">
+
+    </div>
+    <select id="cmbEfecto">
+        <option>show</option>
+        <option>hide</option>
+        <option>toggle</option>
+        <option>fadeIn</option>
+        <option>fadeOut</option>
+        <option>fadeToggle</option>
+        <option>slideUp</option>
+        <option>slideDown</option>
+        <option>slideToggle</option>
+    </select>
+    <button id="btnEfecto">Efecto</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnEfecto").click(function(){
+            var valorSeleccionado = $("#cmbEfecto").val();
+            switch(valorSeleccionado){
+                case "show":
+                    $("#cuadrado").show(500);
+                    break;
+                case "hide":
+                    $("#cuadrado").hide(500);
+                    break;
+                case "toggle":
+                    $("#cuadrado").toggle(500);
+                    break;
+                case "fadeIn":
+                    $("#cuadrado").fadeIn(500);
+                    break;
+                case "fadeOut":
+                    $("#cuadrado").fadeOut(500);
+                    break;
+                case "fadeToggle":
+                    $("#cuadrado").fadeToggle(500);
+                    break;
+                case "slideUp":
+                    $("#cuadrado").slideUp(500);
+                    break;
+                case "slideDown":
+                    $("#cuadrado").slideDown(500);
+                    break;
+                case "slideToggle":
+                    $("#cuadrado").slideToggle(500);
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

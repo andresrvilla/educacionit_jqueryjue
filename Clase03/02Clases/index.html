@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            width: 200px;   
+            height: 200px;
+            background-color: red;
+        }
+
+        .estiloUno {
+            background-color: blue;
+        }
+
+        .estiloDos {
+            width: 350px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+    <button id="btnEstiloUno">Agregar Estilo 1</button><br>
+    <button id="btnEstiloDos">Agregar Estilo 2</button><br>
+    <button id="btnReset">Reset</button>
+    <button id="btnCambiarEstiloDos">Cambiar Estilo 2</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnEstiloUno").click(function(){
+            $(".cuadrado").removeClass("estiloDos");
+            $(".cuadrado").addClass("estiloUno");
+        })
+        $("#btnEstiloDos").click(function(){
+            $(".cuadrado").removeClass("estiloUno");
+            $(".cuadrado").addClass("estiloDos");
+        })
+        $("#btnReset").click(function(){
+            $(".cuadrado").attr("class","cuadrado");
+        })
+
+        $("#btnCambiarEstiloDos").click(function(){
+            $(".cuadrado").toggleClass("estiloDos");
+        });
+    </script>
+</body>
+</html>
