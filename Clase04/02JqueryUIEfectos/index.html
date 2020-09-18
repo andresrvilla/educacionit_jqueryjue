@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+        }
+        .segundoCuadrado{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+        }
+
+        .nuevosValoresSegundoCuadrado{
+            width: 600px;
+            height: 600px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <p>Pregunta</p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis consequat arcu. 
+        Fusce et ipsum ac felis tempor rhoncus non vitae dolor. Maecenas nec metus at nunc 
+        porttitor convallis. Sed cursus felis sit amet libero vestibulum, ac interdum leo 
+        elementum. Aenean nec orci sed nibh gravida placerat quis et ipsum. Sed placerat 
+        nisi eu dui ornare, vel faucibus urna accumsan. Mauris pellentesque nunc sit amet 
+        neque porttitor, at bibendum lorem interdum. Praesent eu orci varius, malesuada lacus 
+        nec, suscipit justo. Proin volutpat massa risus, et facilisis ipsum rhoncus a. Integer 
+        efficitur ullamcorper arcu interdum imperdiet. Mauris in pulvinar elit, in luctus nibh. 
+        In sit amet orci eget metus egestas imperdiet. Nulla facilisi. Aliquam erat volutpat. 
+        Pellentesque tempor felis libero, sit amet eleifend tellus dignissim non.
+    </p>
+    <div class="cuadrado">
+
+    </div>
+    <div class="segundoCuadrado">
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $("p").click(function(){
+            desplegar($(this))
+        })
+
+        function desplegar(actual){
+            //$("SELECTOR_CSS").efecto("efectojqueryui");
+            $("+ p" , actual).toggle("bounce", {times:15}, 5000);
+        }
+
+        $(".cuadrado").click(function(){
+            $(".cuadrado").animate({
+                backgroundColor: "#32a852"
+            })
+        })
+        $(".segundoCuadrado").click(function(){
+            $(".segundoCuadrado").addClass("nuevosValoresSegundoCuadrado", 1500);
+        })
+    </script>
+</body>
+</html>

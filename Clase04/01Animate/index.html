@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado {
+            position:absolute;
+            width:200px;
+            height:200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button>Haceme click</button>
+    <div class="cuadrado">
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("button").click(function (){
+            $(".cuadrado").animate({
+                left: "250px",
+                width: "+=100px",
+                height: "toggle"
+            },3000,function(){
+                alert("Terminó");
+            });
+        });
+    </script>
+</body>
+</html>

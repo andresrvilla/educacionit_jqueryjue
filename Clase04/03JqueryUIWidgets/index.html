@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnAbrir" title="Abre el cuadro de dialogo">Abrir</button>
+    <div id="dialogo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis consequat arcu. 
+        Fusce et ipsum ac felis tempor rhoncus non vitae dolor. Maecenas nec metus at nunc 
+        porttitor convallis. Sed cursus felis sit amet libero vestibulum, ac interdum leo 
+        elementum. Aenean nec orci sed nibh gravida placerat quis et ipsum. Sed placerat nisi
+         eu dui ornare, vel faucibus urna accumsan. Mauris pellentesque nunc sit amet neque 
+         porttitor, at bibendum lorem interdum. Praesent eu orci varius, malesuada lacus nec, 
+         suscipit justo. Proin volutpat massa risus, et facilisis ipsum rhoncus a. Integer 
+         efficitur ullamcorper arcu interdum imperdiet. Mauris in pulvinar elit, in luctus 
+         nibh. In sit amet orci eget metus egestas imperdiet. Nulla facilisi. Aliquam erat 
+         volutpat. Pellentesque tempor felis libero, sit amet eleifend tellus dignissim non.
+    </div>
+    <input type="text" id="fechaDesde" />
+    <input type="text" id="fechaHasta" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $("#dialogo").dialog({
+            autoOpen: false,
+            modal: true,
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "explode"
+            }
+        });
+
+        $("#btnAbrir").button();
+
+        $("#btnAbrir").tooltip();
+
+        $("#btnAbrir").click(function(){
+            $("#dialogo").dialog("open");
+        });
+
+        $("#fechaDesde,#fechaHasta").datepicker({
+            monthNames: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "DIC"],
+            dayNamesMin: ["Dom","Lun","Mar","Mie","Jue","Vie","Sab"],
+            firstDay: 0,
+            dateFormat: "d/m/yy"
+        });
+    </script>
+</body>
+</html>
