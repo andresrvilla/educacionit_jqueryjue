@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .ui-menu { width: 150px; }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>
+            <div>Clase 1</div>
+        </li>
+        <li>
+            <div>Clase 2</div>
+        </li>        
+        <li>
+            <div>Clase 3</div>
+        </li>        
+        <li>
+            <div>Clase 4</div>
+        </li>        
+        <li>
+            <div>Clase 5</div>
+        </li>
+        <li>
+            <div>HTML</div>
+            <ul>
+                <li>
+                    <div>Definicion</div>
+                </li>
+                <li>
+                    <div>Ejemplos</div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>Javascript</div>
+            <ul>
+                <li>
+                    <div>Basicos</div>
+                    <ul>
+                        <li>
+                            <div>Introducción</div>
+                        </li>
+                        <li>
+                            <div>Ejercicios</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Jquery</div>
+                    <ul>
+                        <li>
+                            <div>Introducción</div>
+                        </li>
+                        <li>
+                            <div>Ejemplos</div>
+                        </li>
+                        <li>
+                            <div>Ejercicios</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+</body>
+
+</html>
